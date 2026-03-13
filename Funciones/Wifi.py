@@ -1,14 +1,4 @@
 
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#
-# Zen Osint Creado por t.me/Valen_Qq 
-# Si quieres mas herramientas como Un INFORSTEALER, Ransomware, Herramientas de administracion remota (rats) GRATIS !!! Visita este Github : Valengamerr    
-# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!     ----/   Porfavor distribuir esta herramienta donde quieras DarkWeb, Tiktok, BreachForus \--- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!      ----/   No cambiar derechos de autor   \----
-# En caso de error contactar a t.me/Valen_Qq
-#
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 # @--- LIBRERIAS ---@    - Asegurar de tener todas instaladas 
 import sys
 import os
