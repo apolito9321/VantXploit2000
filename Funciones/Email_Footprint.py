@@ -1,5 +1,5 @@
-# Asegurate de tener todas las librerias, att : Valen_Qq
-# Creado por t.me/Valen_Qq
+# Asegurate de tener todas las librerias, att : Frostziadito
+# VantXploit creado por frostziadito (discord)
 import sys
 import os
 import time
