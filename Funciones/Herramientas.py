@@ -112,6 +112,7 @@ class ZenOsintPurple(QWidget):
             ("Decodificar base64", "Base64.svg", "Base.py"),
             ("Generar identidad falsa", "ID.svg", "ID.py"),
             ("Optimizacion W11", "Herramientas.png", "TGO.bat"),
+            ("Notepad Python", "Herramientas.png", "Notepad/Notepad.py"),
         ]
 
         for i, (name, icon_file, script) in enumerate(tools):
