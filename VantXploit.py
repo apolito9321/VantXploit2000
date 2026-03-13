@@ -7,6 +7,7 @@ from PyQt6.QtCore import Qt, QSize
 from PyQt6.QtGui import QFont, QIcon, QPixmap
 from PyQt6.QtWidgets import QInputDialog, QMessageBox, QLineEdit
 from Funciones.auth import check_auth
+import qdarktheme
 def do_login():
     while True:
         user, oku = QInputDialog.getText(None, "VantXploit - Login", "Ingresa tu usuario:")
@@ -149,8 +150,25 @@ class VantXploit(QWidget):
             print(f"Error: No se encuentra el archivo en {target}")
 
 if __name__ == "__main__":
+    # Tema dark moderno y bonito (PyQtDarkTheme)
+qdarktheme.setup_theme(
+    theme="dark",              # "auto" → sigue el tema de Windows
+    corner_shape="rounded"     # bordes redondeados en widgets
+)
     app = QApplication(sys.argv)
-    app.setStyle("Fusion")
+    app.setStyleSheet("""
+    QPushButton {
+        border-radius: 8px;
+        padding: 8px 16px;
+        font-weight: bold;
+    }
+    QPushButton:hover {
+        background-color: #1e90ff;  /* azul cian para hover */
+    }
+    QToolButton:hover {
+        background-color: #2a2a2a;
+    }
+""")
     window = VantXploit()
     window.show()
     sys.exit(app.exec())
