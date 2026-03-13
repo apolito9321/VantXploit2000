@@ -101,7 +101,7 @@ class ZenInterface(QWidget):
         layout = QVBoxLayout(self)
         layout.setContentsMargins(30, 30, 30, 30)
 
-        self.status_label = QLabel("Esperando... | Creado por t.me/Valen_Qq")
+        self.status_label = QLabel("Esperando... | VantXploit creado por frostziadito (discord)
         self.status_label.setStyleSheet("color: #A020F0; font-weight: bold; font-size: 14px;")
         layout.addWidget(self.status_label)
 
