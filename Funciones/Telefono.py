@@ -91,7 +91,7 @@ class TelefonoScannerUI(QWidget):
         self.console.mousePressEvent = self.handle_links 
         layout.addWidget(self.console)
 
-        footer = QLabel("Zen OSINT creado por t.me/Valen_Qq")
+        footer = QLabel("VantXploit creado por frostziadito (discord)")
         footer.setStyleSheet("color: #444; font-size: 10px;")
         layout.addWidget(footer, alignment=Qt.AlignmentFlag.AlignRight)
 
