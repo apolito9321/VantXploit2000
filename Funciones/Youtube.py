@@ -25,7 +25,7 @@ class YoutubePytubeUI(QWidget):
         return QPixmap()
 
     def init_ui(self):
-        self.setWindowTitle("Zen OSINT - Pytube Downloader | Valen_Qq")
+        self.setWindowTitle("VantXploit Pytube downloader- Creado por tiktok.com/@valentn1851  | V2 |")
         self.setFixedSize(650, 560)
         
 
