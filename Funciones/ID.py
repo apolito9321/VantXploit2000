@@ -12,7 +12,7 @@ class ZenIdentityV21(QWidget):
     def __init__(self):
         super().__init__()
         self.setFixedSize(700, 850)
-        self.setWindowTitle("Zen OSINT - Generador de identidad falsa")
+        self.setWindowTitle("VantXploit - Generador de identidad falsa")
         self.setStyleSheet("background-color: #050505; color: #e0e0e0; font-family: monospace;")
         
         self.init_ui()
