@@ -1,4 +1,4 @@
-# Zen OSINT Creado por t.me/Valen_Qq
+# VantXploit creado por frostziadito (discord)
 import sys
 import os
 import subprocess
@@ -17,7 +17,7 @@ class ZenOsintPurple(QWidget):
         self.init_ui()
 
     def init_ui(self):
-        self.setWindowTitle("Zen OSINT - Herramientas")
+        self.setWindowTitle("VantXploit - Herramientas")
         self.setFixedSize(960, 720)
         
 
@@ -74,7 +74,7 @@ class ZenOsintPurple(QWidget):
         layout_principal.setContentsMargins(40, 40, 40, 40)
 
 
-        title = QLabel("ZEN OSINT - Herramientas")
+        title = QLabel("VantXploit - Herramientas")
         title.setObjectName("main_title")
         layout_principal.addWidget(title)
         
