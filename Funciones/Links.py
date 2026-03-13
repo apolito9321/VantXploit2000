@@ -6,11 +6,11 @@ from PyQt6.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout,
 from PyQt6.QtGui import QFont, QColor, QIcon
 from PyQt6.QtCore import Qt
 
-class ZenLinkVault(QWidget):
+class VantLinkVault(QWidget):
     def __init__(self):
         super().__init__()
         self.setFixedSize(1150, 800)
-        self.setWindowTitle("Zen OSINT - Dark web LINKS")
+        self.setWindowTitle("VantXploit - Dark web LINKS")
         
 
         self.database = {
@@ -145,6 +145,6 @@ class ZenLinkVault(QWidget):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = ZenLinkVault()
+    window = VantLinkVault()
     window.show()
     sys.exit(app.exec())
