@@ -5,27 +5,14 @@ from PyQt6.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout,
                              QPushButton, QLabel, QFrame, QGridLayout)
 from PyQt6.QtCore import Qt, QSize
 from PyQt6.QtGui import QFont, QIcon, QPixmap
-from PyQt6.QtWidgets import QInputDialog, QMessageBox, QLineEdit
-from Funciones.auth import check_auth
+# from Funciones.auth import check_auth   # <-- ya no se necesita
 import qdarktheme
-def do_login():
-    while True:
-        user, oku = QInputDialog.getText(None, "VantXploit - Login", "Ingresa tu usuario:")
-        if not oku:
-            return False
-        pw, okp = QInputDialog.getText(
-            None, "Contraseña", "Ingresa tu contraseña:", QLineEdit.EchoMode.Password
-        )
-        if okp and check_auth(user, pw):
-            return True
-        QMessageBox.warning(None, "Acceso denegado", "Usuario o contraseña incorrecto")
+
 class VantXploit(QWidget):
     def __init__(self):
         super().__init__()
 
-        # === LOGIN OBLIGATORIO ===
-        if not do_login():
-            sys.exit()  # Cierra todo si falla
+        # === LOGIN ELIMINADO (ya no se pide) ===
 
         self.dir_base = os.path.dirname(os.path.abspath(__file__))
         self.icon_path = os.path.join(self.dir_base, "Iconos")
@@ -37,7 +24,6 @@ class VantXploit(QWidget):
         self.setWindowTitle("VantXploit Suite")
         self.setFixedSize(940, 620)
         
-
         self.setStyleSheet("""
             QWidget { 
                 background-color: #080808; 
@@ -72,7 +58,6 @@ class VantXploit(QWidget):
         layout = QVBoxLayout(self)
         layout.setContentsMargins(35, 30, 35, 40)
 
-
         nav = QHBoxLayout()
         
         logo = QLabel()
@@ -84,7 +69,6 @@ class VantXploit(QWidget):
         nav.addWidget(logo)
         nav.addWidget(title)
         nav.addStretch()
-
 
         self.btn_info = QPushButton(" INFO")
         self.btn_info.setObjectName("nav-action")
@@ -105,7 +89,6 @@ class VantXploit(QWidget):
 
         layout.addSpacing(40)
 
-
         hero = QVBoxLayout()
         welcome_txt = QLabel("Bienvenido a VantXploit")
         welcome_txt.setStyleSheet("font-size: 32px; font-weight: 700; color: #fff;")
@@ -115,7 +98,6 @@ class VantXploit(QWidget):
         desc_txt.setStyleSheet("color: #555; font-size: 14px; margin-bottom: 20px;")
         hero.addWidget(desc_txt, alignment=Qt.AlignmentFlag.AlignCenter)
         layout.addLayout(hero)
-
 
         grid_frame = QFrame()
         grid_frame.setObjectName("container")
@@ -133,7 +115,6 @@ class VantXploit(QWidget):
             "Y mas..."
         ]
 
-
         for i, h in enumerate(herramientas_lista):
             item = QLabel(f"• {h}")
             item.setObjectName("tool-item")
@@ -144,7 +125,6 @@ class VantXploit(QWidget):
     def run_module(self, filename):
         target = os.path.join(self.func_path, filename)
         if os.path.exists(target):
-
             subprocess.Popen([sys.executable, target])
         else:
             print(f"Error: No se encuentra el archivo en {target}")
@@ -152,13 +132,13 @@ class VantXploit(QWidget):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
-    # Aplica el tema DARK después de crear la app (obligatorio)
+    # Aplica el tema DARK
     qdarktheme.setup_theme(
-        theme="dark",              # o "auto" para que siga el tema de Windows
-        corner_shape="rounded"     # bordes redondeados (queda lindo)
+        theme="dark",
+        corner_shape="rounded"
     )
 
-    # Estilos extras (tus hover y botones redondeados)
+    # Estilos extras
     app.setStyleSheet("""
         QPushButton {
             border-radius: 8px;
@@ -166,14 +146,14 @@ if __name__ == "__main__":
             font-weight: bold;
         }
         QPushButton:hover {
-            background-color: #1e90ff;  /* azul cian - cámbialo si querés rojo/neón */
+            background-color: #1e90ff;
         }
         QToolButton:hover {
             background-color: #2a2a2a;
         }
     """)
 
-    # Login y ventana principal
+    # Ventana principal (sin login)
     window = VantXploit()
     window.show()
 
