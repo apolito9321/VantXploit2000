@@ -34,13 +34,8 @@
 
 > [!CAUTION]
 > Si quieres  1 GB de base de datos
-> Pedir a : t.me/Valen_Qq   (telegram)
-> Pedir a : uknowuser_qq    (discord)
-> (por limitaciones de github no se puede mandar la base de datos entera)
-> usar zen osint no es recomendable es mas viable omni search
-> omni search esta dedicado solo al osint, zen osint esta mas completo en funciones
-
-
+> Pedir a : frostziadito    (discord)
+> 
 > [!TIP]
 > Si estas en linux ~~NO USES PIP DIRECTAMENTE~~ usa:
 
@@ -55,16 +50,9 @@ source venv/bin/activate
 3.  Instalar librerias  →   ``` pip install -r requirements.txt  ``` O  ``` pip3 install -r requirements.txt  ```
 4.  Ejecutar            →   ``` python3 ZenOsint.py```  O  ``` python ZenOsint.py ```     
 
-## MUESTRAS de que ZenOsint no es un virus y imagenes 
+## MUESTRAS de que VantXploit no es un virus
 
 <img width="1366" height="768" alt="ZenOsint-Seguro" src="https://github.com/user-attachments/assets/8ff2300a-dec3-4134-b89b-356cc18cb89e" />
-
-<img width="1366" height="768" alt="ZenOsint" src="https://github.com/user-attachments/assets/f694c74a-6ec6-47dc-bcfc-0ff6ede8717e" />
-
-<img width="1366" height="768" alt="ZenOsint2" src="https://github.com/user-attachments/assets/de7b3915-629f-4aef-8da6-62956d0a3c54" />
-
-
-
 
 
 
