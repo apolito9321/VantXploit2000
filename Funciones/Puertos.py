@@ -42,7 +42,7 @@ class PortScannerZen(QWidget):
         return QPixmap()
 
     def init_ui(self):
-        self.setWindowTitle("Zen OSINT - Port Scanner")
+        self.setWindowTitle("VantXploit - Port Scanner")
         self.setFixedSize(600, 680)
         
 
