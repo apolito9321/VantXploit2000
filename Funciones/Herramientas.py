@@ -111,6 +111,7 @@ class ZenOsintPurple(QWidget):
             ("Links", "Links.svg", "Links.py"),
             ("Decodificar base64", "Base64.svg", "Base.py"),
             ("Generar identidad falsa", "ID.svg", "ID.py"),
+            ("Optimizacion W11", "Herramientas.png", "TGO.bat"),
         ]
 
         for i, (name, icon_file, script) in enumerate(tools):
@@ -153,8 +154,13 @@ class ZenOsintPurple(QWidget):
     def run_app(self, script_name):
         path = os.path.join(self.script_dir, script_name)
         if os.path.exists(path):
-
-            subprocess.Popen([sys.executable, path])
+            if script_name.lower().endswith('.bat'):
+                try:
+                    os.startfile(path)          # Abre el .bat exactamente como si hicieras doble click
+                except Exception as e:
+                    print(f"Error al abrir el BAT: {e}")
+            else:
+                subprocess.Popen([sys.executable, path])
         else:
             print(f"[!] Archivo no encontrado: {path}")
 
