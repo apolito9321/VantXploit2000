@@ -6,10 +6,26 @@ from PyQt6.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout,
                              QPushButton, QLabel, QScrollArea, QGridLayout, QGraphicsColorizeEffect)
 from PyQt6.QtCore import Qt, QSize
 from PyQt6.QtGui import QIcon, QPixmap, QColor, QLinearGradient
-
+from PyQt6.QtWidgets import QInputDialog, QMessageBox, QLineEdit
+from auth import check_auth
+def do_login():
+    while True:
+        user, oku = QInputDialog.getText(None, "VantXploit - Login", "Ingresa tu usuario:")
+        if not oku:
+            return False
+        pw, okp = QInputDialog.getText(
+            None, "Contraseña", "Ingresa tu contraseña:", QLineEdit.EchoMode.Password
+        )
+        if okp and check_auth(user, pw):
+            return True
+        QMessageBox.warning(None, "Acceso denegado", "Usuario o contraseña incorrecto")
 class ZenOsintPurple(QWidget):
     def __init__(self):
         super().__init__()
+
+        # === LOGIN OBLIGATORIO ===
+        if not do_login():
+            sys.exit()
 
         self.script_dir = os.path.dirname(os.path.abspath(__file__))
         self.icon_path = os.path.join(os.path.dirname(self.script_dir), "Iconos")
