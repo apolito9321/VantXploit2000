@@ -53,7 +53,7 @@ class InfoValen(QWidget):
         self.marco_movil.setObjectName("CajaMovil")
         self.marco_movil.setFixedHeight(50)
         
-        self.texto_marquesina = QLabel("Creado por t.me/Valen_Qq en 2026", self.marco_movil)
+        self.texto_marquesina = QLabel("VantXploit creado por frostziadito (discord) en 2026", self.marco_movil)
         self.texto_marquesina.setObjectName("TextoBrillante")
         self.texto_marquesina.adjustSize()
         self.texto_marquesina.move(self.posicion_x, 15)
@@ -65,7 +65,7 @@ class InfoValen(QWidget):
 
         git_titulo = QLabel("Github:")
         git_titulo.setObjectName("EtiquetaRedes")
-        git_valor = QLabel("Valengamerr")
+        git_valor = QLabel("apolito9321")
         git_valor.setObjectName("ValorRedes")
 
         tele_titulo = QLabel("Telegram:")
@@ -93,6 +93,6 @@ class InfoValen(QWidget):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    ventana = InfoValen()
+    ventana = InfoFrostziadito()
     ventana.show()
     sys.exit(app.exec())
