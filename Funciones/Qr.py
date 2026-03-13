@@ -24,7 +24,7 @@ class ZenQRGeneratorV19(QWidget):
         layout.setSpacing(15)
 
 
-        layout.addWidget(QLabel("Creado por t.me/Valen_Qq"))
+        layout.addWidget(QLabel("VantXploit creado por frostziadito (discord)"))
         row_data = QHBoxLayout()
         self.ico_qr = QLabel()
         self.ico_qr.setPixmap(QPixmap(os.path.join(self.path_iconos, "Qr.svg")).scaled(30, 30, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation))
@@ -122,6 +122,6 @@ class ZenQRGeneratorV19(QWidget):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    win = ZenQRGeneratorV19()
+    win = VantQRGeneratorV19()
     win.show()
     sys.exit(app.exec())
