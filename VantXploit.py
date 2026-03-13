@@ -17,7 +17,7 @@ class ZenOsint(QWidget):
         self.setup_ui()
 
     def setup_ui(self):
-        self.setWindowTitle("Zen OSINT Suite")
+        self.setWindowTitle("VantXploit Suite")
         self.setFixedSize(940, 620)
         
 
@@ -61,7 +61,7 @@ class ZenOsint(QWidget):
         logo = QLabel()
         logo.setPixmap(QPixmap(os.path.join(self.icon_path, "Logo.png")).scaled(32, 32, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation))
         
-        title = QLabel("ZEN OSINT")
+        title = QLabel("VANTXPLOIT")
         title.setStyleSheet("font-size: 16px; font-weight: 800; letter-spacing: 1.5px; color: #fff;")
         
         nav.addWidget(logo)
@@ -90,7 +90,7 @@ class ZenOsint(QWidget):
 
 
         hero = QVBoxLayout()
-        welcome_txt = QLabel("Bienvenido a Zen Osint")
+        welcome_txt = QLabel("Bienvenido a VantXploit")
         welcome_txt.setStyleSheet("font-size: 32px; font-weight: 700; color: #fff;")
         hero.addWidget(welcome_txt, alignment=Qt.AlignmentFlag.AlignCenter)
         
@@ -135,6 +135,6 @@ class ZenOsint(QWidget):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setStyle("Fusion")
-    window = ZenOsint()
+    window = VantXploit()
     window.show()
     sys.exit(app.exec())
