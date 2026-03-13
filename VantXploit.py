@@ -150,25 +150,31 @@ class VantXploit(QWidget):
             print(f"Error: No se encuentra el archivo en {target}")
 
 if __name__ == "__main__":
-    # Tema dark moderno y bonito (PyQtDarkTheme)
-qdarktheme.setup_theme(
-    theme="dark",              # "auto" → sigue el tema de Windows
-    corner_shape="rounded"     # bordes redondeados en widgets
-)
     app = QApplication(sys.argv)
+
+    # Aplica el tema DARK después de crear la app (obligatorio)
+    qdarktheme.setup_theme(
+        theme="dark",              # o "auto" para que siga el tema de Windows
+        corner_shape="rounded"     # bordes redondeados (queda lindo)
+    )
+
+    # Estilos extras (tus hover y botones redondeados)
     app.setStyleSheet("""
-    QPushButton {
-        border-radius: 8px;
-        padding: 8px 16px;
-        font-weight: bold;
-    }
-    QPushButton:hover {
-        background-color: #1e90ff;  /* azul cian para hover */
-    }
-    QToolButton:hover {
-        background-color: #2a2a2a;
-    }
-""")
+        QPushButton {
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-weight: bold;
+        }
+        QPushButton:hover {
+            background-color: #1e90ff;  /* azul cian - cámbialo si querés rojo/neón */
+        }
+        QToolButton:hover {
+            background-color: #2a2a2a;
+        }
+    """)
+
+    # Login y ventana principal
     window = VantXploit()
     window.show()
+
     sys.exit(app.exec())
