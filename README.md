@@ -1,4 +1,4 @@
-### 🛠️ Herramientas de OSINT y Redes
+### 🛠️ Herramientas de OSINT y Redes y Cyberseguridad y cyberataques
 ![IP-info](https://img.shields.io/badge/Buscar_por_IP-000000?style=for-the-badge&logo=google-maps&logoColor=white)
 ![Numero-info](https://img.shields.io/badge/Buscar_por_Teléfono-34D058?style=for-the-badge&logo=whatsapp&logoColor=white)
 ![Email-info](https://img.shields.io/badge/Buscar_por_Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)
@@ -45,10 +45,10 @@ source venv/bin/activate
 ```
 ## INSTALACION
 
-1.  Clonar              →  ```  git clone https://github.com/Valengamerr/Zen-OSINT---MULTI-TOOL-.git ```
-2.  Ir a la carpeta     →  ```  cd Zen-OSINT---MULTI-TOOL- ```
+1.  Clonar              →  ```  git clone https://github.com/apolito9321/VantXploit2000.git ```
+2.  Ir a la carpeta     →  ```  cd VantXploit2000 ```
 3.  Instalar librerias  →   ``` pip install -r requirements.txt  ``` O  ``` pip3 install -r requirements.txt  ```
-4.  Ejecutar            →   ``` python3 ZenOsint.py```  O  ``` python ZenOsint.py ```     
+4.  Ejecutar            →   ``` python3 VantXploit.py```  O  ``` python VantXploit.py ```     
 
 ## MUESTRAS de que VantXploit no es un virus
 
