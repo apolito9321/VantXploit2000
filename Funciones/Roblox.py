@@ -15,7 +15,7 @@ class ZenRobloxTool(QWidget):
     def __init__(self):
         super().__init__()
         self.setFixedSize(1000, 800)
-        self.setWindowTitle("Zen OSINT - Buscar por usuario de roblox + Herramientas de Cookies ")
+        self.setWindowTitle("VantXploit - Buscar por usuario de roblox + Herramientas de Cookies ")
         self.init_ui()
 
     def init_ui(self):
@@ -155,6 +155,6 @@ class ZenRobloxTool(QWidget):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = ZenRobloxTool()
+    window = VantXrobloxTool()
     window.show()
     sys.exit(app.exec())
