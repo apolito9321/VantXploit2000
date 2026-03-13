@@ -5,10 +5,26 @@ from PyQt6.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout,
                              QPushButton, QLabel, QFrame, QGridLayout)
 from PyQt6.QtCore import Qt, QSize
 from PyQt6.QtGui import QFont, QIcon, QPixmap
-
+from PyQt6.QtWidgets import QInputDialog, QMessageBox, QLineEdit
+from Funciones.auth import check_auth
+def do_login():
+    while True:
+        user, oku = QInputDialog.getText(None, "VantXploit - Login", "Ingresa tu usuario:")
+        if not oku:
+            return False
+        pw, okp = QInputDialog.getText(
+            None, "Contraseña", "Ingresa tu contraseña:", QLineEdit.EchoMode.Password
+        )
+        if okp and check_auth(user, pw):
+            return True
+        QMessageBox.warning(None, "Acceso denegado", "Usuario o contraseña incorrecto")
 class VantXploit(QWidget):
     def __init__(self):
         super().__init__()
+
+        # === LOGIN OBLIGATORIO ===
+        if not do_login():
+            sys.exit()  # Cierra todo si falla
 
         self.dir_base = os.path.dirname(os.path.abspath(__file__))
         self.icon_path = os.path.join(self.dir_base, "Iconos")
