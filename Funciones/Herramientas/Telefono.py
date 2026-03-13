@@ -66,7 +66,7 @@ class TelefonoVista(QWidget):
         layout.addWidget(self.console)
 
 
-        footer = QLabel("Zen OSINT creado por t.me/Valen_Qq")
+        footer = QLabel("VantXploit creado por frostziadito (discord)")
         footer.setObjectName("footer")
         layout.addWidget(footer, alignment=Qt.AlignmentFlag.AlignRight)
 
