@@ -13,7 +13,7 @@ class ZenCommander(QWidget):
     def __init__(self):
         super().__init__()
         self.setFixedSize(1200, 850)
-        self.setWindowTitle("ZEN OSINT - Raider no verificado + Info server")
+        self.setWindowTitle("VantXploit - Raider no verificado + Info server")
         self.init_ui()
 
     def init_ui(self):
@@ -190,6 +190,6 @@ class ZenCommander(QWidget):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = ZenCommander()
+    window = VantCommander()
     window.show()
     sys.exit(app.exec())
