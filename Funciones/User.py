@@ -64,7 +64,7 @@ class UsernameTrackerUI(QWidget):
         self.init_ui()
 
     def init_ui(self):
-        self.setWindowTitle("Zen OSINT - Username Tracker | Valen_Qq")
+        self.setWindowTitle("VantXploit - Username Tracker | Frostziadito (discord)")
         self.setFixedSize(650, 650)
         self.setStyleSheet("""
             QWidget { background-color: #050505; color: #e0e0e0; font-family: 'Segoe UI'; }
