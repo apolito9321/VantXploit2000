@@ -14,7 +14,7 @@ class ZenDiscordV33(QWidget):
     def __init__(self):
         super().__init__()
         self.setFixedSize(900, 900)
-        self.setWindowTitle("Zen OSINT - Creado por t.me/Valen_Qq  | Zo V1 |")
+        self.setWindowTitle("VantXploit - Creado por tiktok.com/@valentn1851  | V2 |")
         self.setStyleSheet("background-color: #050505; color: #e0e0e0; font-family: monospace;")
         self.init_ui()
 
@@ -134,6 +134,6 @@ class ZenDiscordV33(QWidget):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    win = ZenDiscordV33()
+    win = VantXploitDiscordV33()
     win.show()
     sys.exit(app.exec())
