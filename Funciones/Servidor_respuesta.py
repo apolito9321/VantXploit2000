@@ -8,7 +8,7 @@ class ProbadorServidor(QWidget):
     def __init__(self):
         super().__init__()
         self.setFixedSize(500, 400)
-        self.setWindowTitle("Zen OSINT - Respuesta de servidor")
+        self.setWindowTitle("VantXploit - Respuesta de servidor")
         self.armar_pantalla()
 
     def armar_pantalla(self):
@@ -59,7 +59,7 @@ class ProbadorServidor(QWidget):
         boton_medir = QPushButton("MEDIR VELOCIDAD")
         boton_medir.clicked.connect(self.medir)
 
-        capa_total.addWidget(QLabel("Zen OSINT creado por t.me/Valen_Qq"))
+        capa_total.addWidget(QLabel("VantXploit creado por frostziadito (discord)"))
         capa_total.addWidget(self.url_texto)
         capa_total.addWidget(self.cuadro)
         capa_total.addWidget(boton_medir)
