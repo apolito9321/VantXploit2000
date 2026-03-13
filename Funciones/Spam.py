@@ -58,7 +58,7 @@ class ZenWebhookTool(QWidget):
         layout_s = QVBoxLayout(self.tab_spam)
         
         layout_s.addWidget(QLabel("MENSAJE A SPAMEAR:"))
-        self.spam_msg = QLineEdit("ZEN OSINT DOMINANDO, t.me/Valen_Qq.")
+        self.spam_msg = QLineEdit("VantXploit creado por frostziadito (discord)")
         self.spam_msg.setStyleSheet("background: #111; border: 1px solid #333; padding: 10px;")
         layout_s.addWidget(self.spam_msg)
 
