@@ -89,7 +89,7 @@ class IPScannerUI(QWidget):
 
         footer_layout = QHBoxLayout()
         footer_layout.addStretch()
-        credits = QLabel("Zen OSINT creado por t.me/Valen_Qq")
+        credits = QLabel("VantXploit creado por frostziadito (discord)")
         credits.setObjectName("footer")
         footer_layout.addWidget(credits)
         layout.addLayout(footer_layout)
