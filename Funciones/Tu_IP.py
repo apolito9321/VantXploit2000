@@ -7,7 +7,7 @@ class VisorIP(QWidget):
     def __init__(self):
         super().__init__()
         self.setFixedSize(450, 300)
-        self.setWindowTitle("Zen OSINT - Ver TU IP Publica")
+        self.setWindowTitle("VantXploit - Ver TU IP Publica")
         self.dibujar()
 
     def dibujar(self):
