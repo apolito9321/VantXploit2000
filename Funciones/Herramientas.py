@@ -6,14 +6,10 @@ from PyQt6.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout,
                              QPushButton, QLabel, QScrollArea, QGridLayout, QGraphicsColorizeEffect)
 from PyQt6.QtCore import Qt, QSize
 from PyQt6.QtGui import QIcon, QPixmap, QColor, QLinearGradient
-from PyQt6.QtWidgets import QInputDialog, QMessageBox, QLineEdit
-# from auth import check_auth   # <-- ya no se necesita
 
 class ZenOsintPurple(QWidget):
     def __init__(self):
         super().__init__()
-
-        # === LOGIN ELIMINADO (ya no se pide) ===
 
         self.script_dir = os.path.dirname(os.path.abspath(__file__))
         self.icon_path = os.path.join(os.path.dirname(self.script_dir), "Iconos")
@@ -24,6 +20,7 @@ class ZenOsintPurple(QWidget):
         self.setWindowTitle("VantXploit - Herramientas")
         self.setFixedSize(960, 720)
         
+
         self.setStyleSheet("""
             QWidget { 
                 background-color: #050505; 
@@ -33,6 +30,7 @@ class ZenOsintPurple(QWidget):
             
             QScrollArea { border: none; background: transparent; }
             
+
             QScrollBar:vertical {
                 border: none;
                 background: #0a0a0a;
@@ -44,6 +42,7 @@ class ZenOsintPurple(QWidget):
                 border-radius: 5px;
                 min-height: 20px;
             }
+
 
             QPushButton#tool_btn {
                 background-color: #0d0d0f;
@@ -74,6 +73,7 @@ class ZenOsintPurple(QWidget):
         layout_principal = QVBoxLayout(self)
         layout_principal.setContentsMargins(40, 40, 40, 40)
 
+
         title = QLabel("VantXploit - Herramientas")
         title.setObjectName("main_title")
         layout_principal.addWidget(title)
@@ -87,6 +87,7 @@ class ZenOsintPurple(QWidget):
         grid = QGridLayout(container)
         grid.setSpacing(15)
         grid.setContentsMargins(0, 0, 0, 0)
+
 
         tools = [
             ("Buscar por IP", "IP.svg", "IP.py"),
@@ -123,12 +124,15 @@ class ZenOsintPurple(QWidget):
             btn_layout.setContentsMargins(12, 8, 12, 8)
             btn_layout.setSpacing(15)
 
+
             icon_label = QLabel()
             pix = QPixmap(os.path.join(self.icon_path, icon_file))
             
             if not pix.isNull():
+
                 icon_label.setPixmap(pix.scaled(30, 30, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation))
-                # Efecto de color púrpura (opcional, puedes quitarlo si prefieres)
+                
+
                 color_effect = QGraphicsColorizeEffect()
                 color_effect.setColor(QColor("#BF40FF")) 
                 icon_label.setGraphicsEffect(color_effect)
