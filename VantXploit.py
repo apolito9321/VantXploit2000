@@ -1,12 +1,10 @@
 import sys
 import os
 import subprocess
-import traceback
 from PyQt6.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout, 
-                             QPushButton, QLabel, QFrame, QGridLayout, QMessageBox)
+                             QPushButton, QLabel, QFrame, QGridLayout)
 from PyQt6.QtCore import Qt, QSize
 from PyQt6.QtGui import QFont, QIcon, QPixmap
-from login_window import LoginWindow   # ← debe estar en la misma carpeta
 
 class VantXploit(QWidget):
     def __init__(self):
@@ -22,6 +20,7 @@ class VantXploit(QWidget):
         self.setWindowTitle("VantXploit Suite")
         self.setFixedSize(940, 620)
         
+
         self.setStyleSheet("""
             QWidget { 
                 background-color: #080808; 
@@ -56,6 +55,7 @@ class VantXploit(QWidget):
         layout = QVBoxLayout(self)
         layout.setContentsMargins(35, 30, 35, 40)
 
+
         nav = QHBoxLayout()
         
         logo = QLabel()
@@ -67,6 +67,7 @@ class VantXploit(QWidget):
         nav.addWidget(logo)
         nav.addWidget(title)
         nav.addStretch()
+
 
         self.btn_info = QPushButton(" INFO")
         self.btn_info.setObjectName("nav-action")
@@ -87,6 +88,7 @@ class VantXploit(QWidget):
 
         layout.addSpacing(40)
 
+
         hero = QVBoxLayout()
         welcome_txt = QLabel("Bienvenido a VantXploit")
         welcome_txt.setStyleSheet("font-size: 32px; font-weight: 700; color: #fff;")
@@ -96,6 +98,7 @@ class VantXploit(QWidget):
         desc_txt.setStyleSheet("color: #555; font-size: 14px; margin-bottom: 20px;")
         hero.addWidget(desc_txt, alignment=Qt.AlignmentFlag.AlignCenter)
         layout.addLayout(hero)
+
 
         grid_frame = QFrame()
         grid_frame.setObjectName("container")
@@ -113,6 +116,7 @@ class VantXploit(QWidget):
             "Y mas..."
         ]
 
+
         for i, h in enumerate(herramientas_lista):
             item = QLabel(f"• {h}")
             item.setObjectName("tool-item")
@@ -123,28 +127,14 @@ class VantXploit(QWidget):
     def run_module(self, filename):
         target = os.path.join(self.func_path, filename)
         if os.path.exists(target):
+
             subprocess.Popen([sys.executable, target])
         else:
             print(f"Error: No se encuentra el archivo en {target}")
 
 if __name__ == "__main__":
-    try:
-        app = QApplication(sys.argv)
-        app.setStyle("Fusion")
-        
-        # ==================== LOGIN ====================
-        login = LoginWindow()
-        if login.exec() == QDialog.DialogCode.Accepted:
-            window = VantXploit()
-            window.show()
-            sys.exit(app.exec())
-        else:
-            sys.exit(0)
-            
-    except Exception as e:
-        error_msg = traceback.format_exc()
-        QMessageBox.critical(None, "🚨 ERROR FATAL - VantXploit", 
-                            f"Se produjo un error al iniciar:\n\n{error_msg}\n\n"
-                            "Copia TODO este texto y pégamelo aquí en el chat.\n"
-                            "Así lo arreglamos en 10 segundos.")
-        sys.exit(1)
+    app = QApplication(sys.argv)
+    app.setStyle("Fusion")
+    window = VantXploit()
+    window.show()
+    sys.exit(app.exec())
