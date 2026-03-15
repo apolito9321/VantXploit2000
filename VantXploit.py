@@ -1,11 +1,12 @@
 import sys
 import os
 import subprocess
+import traceback
 from PyQt6.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout, 
-                             QPushButton, QLabel, QFrame, QGridLayout)
+                             QPushButton, QLabel, QFrame, QGridLayout, QMessageBox)
 from PyQt6.QtCore import Qt, QSize
 from PyQt6.QtGui import QFont, QIcon, QPixmap
-from login_window import LoginWindow   # ← NUEVO
+from login_window import LoginWindow   # ← debe estar en la misma carpeta
 
 class VantXploit(QWidget):
     def __init__(self):
@@ -127,14 +128,23 @@ class VantXploit(QWidget):
             print(f"Error: No se encuentra el archivo en {target}")
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    app.setStyle("Fusion")
-    
-    # ==================== LOGIN ====================
-    login = LoginWindow()
-    if login.exec() == QDialog.DialogCode.Accepted:
-        window = VantXploit()
-        window.show()
-        sys.exit(app.exec())
-    else:
-        sys.exit(0)
+    try:
+        app = QApplication(sys.argv)
+        app.setStyle("Fusion")
+        
+        # ==================== LOGIN ====================
+        login = LoginWindow()
+        if login.exec() == QDialog.DialogCode.Accepted:
+            window = VantXploit()
+            window.show()
+            sys.exit(app.exec())
+        else:
+            sys.exit(0)
+            
+    except Exception as e:
+        error_msg = traceback.format_exc()
+        QMessageBox.critical(None, "🚨 ERROR FATAL - VantXploit", 
+                            f"Se produjo un error al iniciar:\n\n{error_msg}\n\n"
+                            "Copia TODO este texto y pégamelo aquí en el chat.\n"
+                            "Así lo arreglamos en 10 segundos.")
+        sys.exit(1)
