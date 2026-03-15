@@ -113,6 +113,7 @@ class ZenOsintPurple(QWidget):
             ("Generar identidad falsa", "ID.svg", "ID.py"),
             ("Optimizacion W11", "Herramientas.png", "TGO.bat"),
             ("Notepad Python", "Herramientas.png", "Notepad/Notepad.py"),
+            ("Phishing", "Chrome.svg", "Funciones/pyphisher.py"),
         ]
 
         for i, (name, icon_file, script) in enumerate(tools):
