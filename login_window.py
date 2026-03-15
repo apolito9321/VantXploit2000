@@ -3,7 +3,7 @@ import os
 from PyQt6.QtWidgets import (QDialog, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, 
                              QPushButton, QMessageBox, QCheckBox, QFrame)
 from PyQt6.QtCore import Qt
-from PyQt6.QtGui import QPixmap, QIcon, QFont
+from PyQt6.QtGui import QPixmap, QFont
 from database import register_user, verify_login
 
 class LoginWindow(QDialog):
@@ -19,7 +19,10 @@ class LoginWindow(QDialog):
             }
         """)
         
-        # === CONTENEDOR CENTRAL (igual que tu QFrame#container) ===
+        # Ruta correcta del logo (igual que en tu app original)
+        self.dir_base = os.path.dirname(os.path.abspath(__file__))
+        self.icon_path = os.path.join(self.dir_base, "Iconos")
+        
         main_layout = QVBoxLayout()
         main_layout.setContentsMargins(40, 40, 40, 40)
         main_layout.setSpacing(20)
@@ -37,10 +40,9 @@ class LoginWindow(QDialog):
         card_layout = QVBoxLayout(card)
         card_layout.setSpacing(18)
         
-        # === LOGO + TÍTULO (exacto estilo hero de tu app) ===
-        icon_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "Iconos")
+        # Logo + Título (igual estilo que tu nav)
         logo_label = QLabel()
-        logo_pixmap = QPixmap(os.path.join(icon_path, "Logo.png"))
+        logo_pixmap = QPixmap(os.path.join(self.icon_path, "Logo.png"))
         if not logo_pixmap.isNull():
             logo_label.setPixmap(logo_pixmap.scaled(80, 80, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation))
         logo_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -57,13 +59,11 @@ class LoginWindow(QDialog):
         subtitle.setAlignment(Qt.AlignmentFlag.AlignCenter)
         card_layout.addWidget(subtitle)
         
-        # === CAMPOS DE TEXTO ===
         self.email_input = QLineEdit()
         self.email_input.setPlaceholderText("Email")
         self.email_input.setStyleSheet(self.input_style())
         card_layout.addWidget(self.email_input)
         
-        # Password + botón ojo
         pass_layout = QHBoxLayout()
         self.password_input = QLineEdit()
         self.password_input.setPlaceholderText("Contraseña")
@@ -79,15 +79,12 @@ class LoginWindow(QDialog):
         """)
         self.toggle_btn.clicked.connect(self.toggle_password)
         pass_layout.addWidget(self.toggle_btn)
-        
         card_layout.addLayout(pass_layout)
         
-        # Recordarme
         self.remember = QCheckBox("Recordarme")
         self.remember.setStyleSheet("color: #777; font-size: 13px;")
         card_layout.addWidget(self.remember)
         
-        # === BOTONES ===
         btn_login = QPushButton("INICIAR SESIÓN")
         btn_login.setFixedHeight(48)
         btn_login.setStyleSheet(self.button_style())
@@ -103,7 +100,6 @@ class LoginWindow(QDialog):
         main_layout.addWidget(card)
         self.setLayout(main_layout)
     
-    # Estilos reutilizables (copiados de tu app)
     def input_style(self):
         return """
             QLineEdit {
@@ -137,7 +133,7 @@ class LoginWindow(QDialog):
             }
         """
         if secondary:
-            return base.replace("#121212", "#0c0c0c")  # un poco más oscuro
+            return base.replace("#121212", "#0c0c0c")
         return base
     
     def toggle_password(self):
@@ -157,7 +153,7 @@ class LoginWindow(QDialog):
             return
         
         if verify_login(email, password):
-            QMessageBox.information(self, "¡Bienvenido!", f"Acceso concedido\nHola de nuevo 👋")
+            QMessageBox.information(self, "¡Bienvenido!", f"Acceso concedido 👋")
             self.accept()
         else:
             QMessageBox.warning(self, "Error", "Email o contraseña incorrectos")
