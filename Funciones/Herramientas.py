@@ -74,7 +74,7 @@ class ZenOsintPurple(QWidget):
         layout_principal.setContentsMargins(40, 40, 40, 40)
 
 
-        title = QLabel("VantXploit - Herramientas")
+        title = QLabel("VantXploit - Page 1")
         title.setObjectName("main_title")
         layout_principal.addWidget(title)
         
