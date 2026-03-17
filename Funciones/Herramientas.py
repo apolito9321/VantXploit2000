@@ -17,7 +17,7 @@ class ZenOsintPurple(QWidget):
         self.init_ui()
 
     def init_ui(self):
-        self.setWindowTitle("VantXploit The best")
+        self.setWindowTitle("VantXploit - Herramientas")
         self.setFixedSize(960, 720)
         
 
@@ -73,7 +73,7 @@ class ZenOsintPurple(QWidget):
         layout_principal = QVBoxLayout(self)
         layout_principal.setContentsMargins(40, 40, 40, 40) 
       
-  title = QLabel("!!VantXploit The best!!")
+  title = QLabel("VantXploit - Herramientas!")
         title.setObjectName("main_title")
         layout_principal.addWidget(title)
         
