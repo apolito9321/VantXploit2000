@@ -17,7 +17,7 @@ class ZenOsintPurple(QWidget):
         self.init_ui()
 
     def init_ui(self):
-        self.setWindowTitle("VantXploit The best")
+        self.setWindowTitle("VantXploit Page 2")
         self.setFixedSize(960, 720)
         
 
@@ -55,8 +55,8 @@ class ZenOsintPurple(QWidget):
             }
             
             QPushButton#tool_btn:hover {
-                background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #A020F0, stop:1 #4B0082);
-                border: 1px solid #D680FF;
+                background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #ffffff, stop:1 #f0f0f0);
+                border: 1px solid #c0c0c0;
                 color: #ffffff;
             }
 
@@ -74,7 +74,7 @@ class ZenOsintPurple(QWidget):
         layout_principal.setContentsMargins(40, 40, 40, 40)
 
 
-        title = QLabel("VantXploit - Herramientas")
+        title = QLabel("VantXploit - Page 2")
         title.setObjectName("main_title")
         layout_principal.addWidget(title)
         
@@ -90,29 +90,12 @@ class ZenOsintPurple(QWidget):
 
 
         tools = [
-            ("Search by ip", "herramienta5.svg", "IP.py"),
-            ("Phone number", "herramienta5.svg", "Telefono.py"),
-            ("Email footprint", "Email_Footprint.svg", "Email_Footprint.py"),
-            ("Search user", "user5.svg", "Usuario.py"),
-            ("Web Information", "Web.svg", "Info_web.py"),
-            
-            ("Port scanning", "Escaneo.svg", "Puertos.py"),
-            ("wifi test", "wifi5.svg", "Wifi.py"),
-            ("Your IP", "TuIP.svg", "config5.py"),
-            ("Server Response", "herramienta5.svg", "Servidor_respuesta.py"),
-            ("YouTube Downloader", "youtube5.svg", "Youtube.py"),
-            ("Discord Token", "discord5.svg", "Discord_token_info.py"),
-            ("Server Discord", "discord5.svg", "Discord_servidor_info.py"),
-            ("Spam Webhook", "Spam.svg", "Spam.py"),
-            ("Roblox ID", "id5.svg", "Roblox.py"),
-            ("User Roblox", "roblox5.svg", "Roblox.py"),
-            ("SQL vulnerability", "config5.svg", "Sql.py"),
-            ("Generate QR", "qr5.svg", "Qr.py"),
-            ("Links", "links5.svg", "Links.py"),
-            ("Decode base64", "herramienta5.svg", "Base.py"),
-            ("Generar identidad falsa", "id5.svg", "ID.py"),
-            ("W11 Optimization", "herramienta5.png", "TGO.bat"),
-            ("Custom Notepad", "herramienta5.png", "Notepad/Notepad.py"),
+            ("Nitro Generator", "discord5.svg", "nitro_generator.py"),
+            ("Token Generator", "discord5.svg", "token_generator.py"),
+            ("Ip  Generator", "herramienta5.svg", "ip_generator.py"),
+            ("Server lookup", "discord5.svg", "Server_Lookup.py"),
+            ("Obfuscator code", "herramienta5.svg", "obfuscator.py"),
+            ("DoS attack", "herramienta5.svg", "DoS.py"),
         ]
 
         for i, (name, icon_file, script) in enumerate(tools):
