@@ -17,7 +17,14 @@ class ZenOsintPurple(QWidget):
         self.init_ui()
 
     def init_ui(self):
-        self.setWindowTitle("VantXploit - Herramientas")
+        self.setWindowTitle("Output
+██╗   ██╗ █████╗ ███╗   ██╗████████╗██╗  ██╗██████╗ ██╗      ██████╗ ██╗████████╗
+██║   ██║██╔══██╗████╗  ██║╚══██╔══╝╚██╗██╔╝██╔══██╗██║     ██╔═══██╗██║╚══██╔══╝
+██║   ██║███████║██╔██╗ ██║   ██║    ╚███╔╝ ██████╔╝██║     ██║   ██║██║   ██║   
+╚██╗ ██╔╝██╔══██║██║╚██╗██║   ██║    ██╔██╗ ██╔═══╝ ██║     ██║   ██║██║   ██║   
+ ╚████╔╝ ██║  ██║██║ ╚████║   ██║   ██╔╝ ██╗██║     ███████╗╚██████╔╝██║   ██║   
+  ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝   ╚═╝   
+                                                                                 ")
         self.setFixedSize(960, 720)
         
 
@@ -90,30 +97,29 @@ class ZenOsintPurple(QWidget):
 
 
         tools = [
-            ("Buscar por IP", "IP.svg", "IP.py"),
-            ("Número de teléfono", "Telefono.svg", "Telefono.py"),
+            ("Search by ip", "herramienta5.svg", "IP.py"),
+            ("Phone number", "herramienta5.svg", "Telefono.py"),
             ("Email footprint", "Email_Footprint.svg", "Email_Footprint.py"),
-            ("Buscar usuario", "Usuario.svg", "Usuario.py"),
-            ("Información Web", "Web.svg", "Info_web.py"),
-            ("Escaneo de puertos", "Escaneo.svg", "Puertos.py"),
-            ("Test de wifi", "Wifi.svg", "Wifi.py"),
-            ("Tu IP", "TuIP.svg", "Tu_IP.py"),
-            ("Respuesta Servidor", "Servidor-resp.svg", "Servidor_respuesta.py"),
-            ("YouTube Downloader", "Youtube.svg", "Youtube.py"),
-            ("Base de Datos", "Db.svg", "BD.py"),
-            ("Discord Token", "Info-tk.svg", "Discord_token_info.py"),
-            ("Roblox ID", "Info-rbx-id.svg", "Roblox.py"),
-            ("Usuario Roblox", "Info-us-rbx.svg", "Roblox.py"),
-            ("Server Discord", "Info-sv-dc.svg", "Discord_servidor_info.py"),
-            ("Vulnerabilidad SQL", "Sql.svg", "Sql.py"),
-            ("Generar QR", "Qr.svg", "Qr.py"),
-            ("Spamear Webhook", "Spam.svg", "Spam.py"),
-            ("Links", "Links.svg", "Links.py"),
-            ("Decodificar base64", "Base64.svg", "Base.py"),
-            ("Generar identidad falsa", "ID.svg", "ID.py"),
-            ("Optimizacion W11", "Herramientas.png", "TGO.bat"),
-            ("Notepad Python", "Herramientas.png", "Notepad/Notepad.py"),
-            ("Phishing", "Chrome.svg", "Funciones/pyphisher.py"),
+            ("Search user", "user5.svg", "Usuario.py"),
+            ("Web Information", "Web.svg", "Info_web.py"),
+            
+            ("Port scanning", "Escaneo.svg", "Puertos.py"),
+            ("wifi test", "wifi5.svg", "Wifi.py"),
+            ("Your IP", "TuIP.svg", "config5.py"),
+            ("Server Response", "herramienta5.svg", "Servidor_respuesta.py"),
+            ("YouTube Downloader", "youtube5.svg", "Youtube.py"),
+            ("Discord Token", "discord5.svg", "Discord_token_info.py"),
+            ("Server Discord", "discord5.svg", "Discord_servidor_info.py"),
+            ("Spam Webhook", "Spam.svg", "Spam.py"),
+            ("Roblox ID", "id5.svg", "Roblox.py"),
+            ("User Roblox", "roblox5.svg", "Roblox.py"),
+            ("SQL vulnerability", "config5.svg", "Sql.py"),
+            ("Generate QR", "qr5.svg", "Qr.py"),
+            ("Links", "links5.svg", "Links.py"),
+            ("Decode base64", "herramienta5.svg", "Base.py"),
+            ("Generar identidad falsa", "id5.svg", "ID.py"),
+            ("W11 Optimization", "herramienta5.png", "TGO.bat"),
+            ("Custom Notepad", "herramienta5.png", "Notepad/Notepad.py"),
         ]
 
         for i, (name, icon_file, script) in enumerate(tools):
