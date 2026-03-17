@@ -96,6 +96,7 @@ class ZenOsintPurple(QWidget):
             ("Server lookup", "discord5.svg", "Server_Lookup.py"),
             ("Obfuscator code", "herramienta5.svg", "obfuscator.py"),
             ("DoS attack", "herramienta5.svg", "DoS.py"),
+             ("Sms Bomber", "herramienta5.svg", "sms/sms.py"),
         ]
 
         for i, (name, icon_file, script) in enumerate(tools):
