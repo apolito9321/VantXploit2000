@@ -17,9 +17,7 @@ class ZenOsintPurple(QWidget):
         self.init_ui()
 
     def init_ui(self):
-        self.setWindowTitle("┌─────────────────────┐
-│ VantXploit The best │
-└─────────────────────┘ ")
+        self.setWindowTitle("VantXploit The best")
         self.setFixedSize(960, 720)
         
 
